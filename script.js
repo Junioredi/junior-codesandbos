@@ -11,3 +11,18 @@ function toggleMenu() {
 
 
 btnMobile.addEventListener('click', toggleMenu);
+
+
+const infoProduto = document.getElementById('info-produto')
+
+function infoProdutoo() {
+    const li = document.getElementByI('info-produto')
+    li.classList.toggle('in');
+
+
+
+}
+
+
+
+infoProduto.addEventListener('click', infoProdutoo);
