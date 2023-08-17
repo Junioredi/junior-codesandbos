@@ -1,0 +1,858 @@
+/*Pagina Home*/
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala&display=swap');
+font {
+  font-family: 'Righteous', cursive;
+  font-family: 'Sarala', sans-serif;
+}
+/*Reset */
+* {
+  background-color: rgba(135,206,250, 0.5);
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;    
+}
+
+/*Para Dispositivos Laptop*/
+/*layoute Do menu*/
+#logo{
+  width: 20vw;
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+a:hover{
+    background: rgba(0,0,0, 0.5);
+}
+#header{
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(135,206,250, 0.5);
+  
+}
+#menu{
+    display: flex;
+    list-style: none;
+    gap: .5rem;
+}
+#menu a{
+    display: block;
+    padding: 1rem;
+
+}
+#btn-mobile{
+    display: none;
+}
+
+#head{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+ 
+}
+.conteudo{
+  display: flex;
+  height: 50vh;
+  width: 100vw;
+  align-items:center;
+ 
+}
+#conteudo-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+
+}
+#conteudo-item h1{
+  font-family: sans-serif;
+  font-size: 20px;
+  margin: 10px;
+}
+#canteudo-item h3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 35px;
+  margin: 10px;
+}
+.baner{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 2vw;
+}
+.baner span{
+  font-size:1rem ;
+}
+.baner img{
+  width: 20vw;
+
+}
+
+.itens img{
+  width: 50vw;
+}
+
+
+
+
+
+/*Para Dispositivos Movei Smartfone*/
+@media (max-width: 500px){
+  #header{
+    background-color: rgba(135,206,250, 0.5);
+  }
+  #logo img{
+    width: 25vw;
+    height: 7vh;
+  
+  }
+    #menu {
+        display: block;
+        flex-wrap: wrap;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background-color: rgba(135,206,250, 0.5);
+        transition: .6s;
+        z-index: 1000;
+        height: 5px;
+        visibility: hidden;
+        overflow-y: hidden;
+
+    }
+    #nav.active #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+       
+      
+    }
+    #menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0,0,0, 0.5);
+    }
+    #btn-mobile#btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap:  .5rem;
+    }
+    #hamburger{
+        }
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor; 
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+
+    }
+    #nav.active #hambueger{
+        border-top: 2px solid transparent;
+        
+ 
+    }
+    #nav.active #hamburger::after{
+        transform: rotate(135deg);
+        top: -7px;
+    }
+
+
+    #nav.active #hamburger::before{
+        transform: rotate(-135deg);
+        
+    }
+
+
+#head{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 90vw; 
+}
+.conteudo{
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  width: 100vw;
+}
+
+.conteudo div{
+  background-color: rgba(135,206,250, 0.3);
+  border-radius: 2px;
+}
+.conteudo h1{
+  font-size:  100px;;
+ 
+}
+.conteudo h2{
+  text-align: center;
+  font-size: 90%;
+}
+
+.baner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+
+}
+.baner img{
+  width: 80vw;
+  
+
+}
+.baner span{
+  font-size:10px;
+  width: 80vw;
+}
+.produtos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 500px;
+  
+
+}
+.produtos h3{
+  width: 80vw;
+padding: 20px 20px;
+background-color: rgba(135,206,250, 0.3);
+border-radius: 2px;
+
+}
+#itens{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  background-color: rgba(135,206,250, 0.2);
+  width: 100vw;
+  height: 50vh;
+  padding: 4px;
+}
+#itens img{
+  right: 0px;
+  width:60vw;
+  height: 30vh;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(214, 225, 233, 0.37);
+}
+
+#itens span a{
+  display:absolute;
+  background-color: rgba(135,206,250, 0.40);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+  
+}
+#itens img:hover::after #itens span a{
+  display: block;
+}
+
+
+
+.projetos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 60vh;
+  margin: 10px;
+  background-color: rgba(214, 225, 231, 0.281);
+}
+.projeto h3{
+  text-align: center;
+  background-color: rgba(214, 225, 233, 0.74);
+}
+/*sub menu da aba projetos */
+.sbm-projetos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 60vh;
+  
+}
+.sbm-projetos img{
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 40vh ;
+  background-color: white;
+  margin: 10px;
+}
+
+.sbm-projetos span{
+  display:absolute;
+  background-color: rgba(135, 206, 250, 0.685);
+  border-radius: 3px;
+  padding: 10px;
+  margin: 20px;
+}
+.noticias{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  height: 45vh;
+  padding: 20px;
+  margin: 0px 10px;
+}
+.noticias h2{
+  padding: 10px;
+  margin: 1px 5px;
+  width: 100vw;
+  background-color: rgba(14, 11, 11, 0.144);
+  
+
+}
+.noticias h4{
+  width: 90vw;
+}
+#footer{
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: 60vh;
+}
+.Info-contato{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+}
+.Info-contato span{
+  margin: 5px;
+}
+.contato-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10vw;
+  height: 80vh;
+  padding: 20px 35vw;
+  margin: 8px 43px;
+  background-color: rgba(135,206,250, 0.3);
+  border-radius: 5px;
+}
+.contato-box input{
+  padding: 10px;
+  margin: 5px;
+}
+.contato-box button{
+  width: 39vw;
+  height: 5vh;
+}
+}
+
+/*Para Dispositivos Tablet*/
+@media (min-width: 500px) and (max-width:1000px){
+  #header{
+    display: flex;
+    width: 100vw;
+    background-color: rgba(135,206,250, 0.5);
+  }
+  #logo img{
+    width: 25vw;
+  
+  }
+    #menu {
+        display: block;
+        flex-wrap: wrap;
+        position: absolute;
+        width: 70vw;
+        top: 70px;
+        right: 0px;
+        background-color: rgba(135,206,250, 0.5);
+        transition: .6s;
+        z-index: 1000;
+        height: 20px;
+        visibility: hidden;
+        overflow-y: hidden;
+
+    }
+    #nav.active #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+       
+      
+    }
+    #menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0,0,0, 0.5);
+    }
+    #btn-mobile#btn-mobile{
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap:  .5rem;
+    }
+    #hamburger{
+        }
+    #hamburger::after, #hamburger::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor; 
+        margin-top: 5px;
+        transition: .3s;
+        position: relative;
+
+    }
+    #nav.active #hambueger{
+        border-top: 2px solid transparent;
+        
+ 
+    }
+    #nav.active #hamburger::after{
+        transform: rotate(135deg);
+        top: -7px;
+    }
+
+
+    #nav.active #hamburger::before{
+        transform: rotate(-135deg);
+        
+    }
+
+
+#head{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: 70vh;
+}
+.conteudo{
+  display: flex;
+  align-items:center ;
+  justify-content: center;
+  width: 100vw;
+  height: 60vh;
+
+ 
+}
+.conteudo div{
+  background-color: rgba(135,206,250, 0.3);
+  border-radius: 2px;
+}
+.conteudo h1{
+  font-size:  100px;;
+ 
+}
+.conteudo h2{
+  text-align: center;
+  font-size: 90%;
+}
+
+
+.baner{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+
+}
+.baner img{
+  width: 80vw;
+  
+
+}
+.baner span{
+  font-size:2.6rem;
+  width: 80vw;
+}
+.produtos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 600px;
+
+}
+
+.produtos h2{
+width: 90vw;
+padding: 10px;
+
+}
+#itens{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  background-color: thistle;
+  width: 70vw;
+  height: 500px;
+  padding: 4px;
+}
+#itens img{
+  width:80vw;
+  height: 50vh;
+  padding: 5px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+#itens span a{
+  display:none ;
+ 
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+  
+}
+#itens img:hover{
+  display: block;
+}
+
+
+
+.projetos{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 40vh;
+ 
+}
+.projeto h3{
+  text-align: center;
+  background-color: rgba(214, 225, 233, 0.74);
+}
+/*sub menu da aba projetos */
+.sbm-projetos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 60vh;
+  
+}
+.sbm-projetos img{
+  align-items: center;
+  justify-content: center;
+  width: 60vw;
+  height: 40vh ;
+  background-color: white;
+  margin: 10px;
+}
+
+.sbm-projetos span{
+  display:absolute;
+  background-color: rgba(135, 206, 250, 0.685);
+  border-radius: 3px;
+  padding: 10px;
+  margin: 20px;
+}
+.noticias{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  height: 45vh;
+  padding: 20px;
+  margin: 0px 10px;
+}
+.noticias h2{
+  padding: 10px;
+  margin: 1px 5px;
+  width: 100vw;
+  background-color: rgba(14, 11, 11, 0.144);
+  
+
+}
+.noticias h4{
+  width: 90vw;
+}
+#footer{
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: 60vh;
+}
+.Info-contato{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+}
+.Info-contato span{
+  margin: 5px;
+}
+.contato-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10vw;
+  height: 80vh;
+  padding: 20px 35vw;
+  margin: 8px 43px;
+  background-color: rgba(135,206,250, 0.3);
+  border-radius: 5px;
+}
+.contato-box input{
+  padding: 10px;
+  margin: 5px;
+}
+.contato-box button{
+  width: 39vw;
+  height: 5vh;
+}
+}
+
+
+/*Para Dispositivos Laptop*/
+@media (min-width: 1000px) and (max-width:4000px){
+  :root body {
+    background-color: rgba(135,206,250, 0.5);
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;    
+  }
+  #logo{
+    width: 20vw;
+  }
+  a{
+      color: black;
+      text-decoration: none;
+      font-family: sans-serif;
+  }
+  a:hover{
+      background: rgba(0,0,0, 0.5);
+  }
+  #header{
+      box-sizing: border-box;
+      height: 70px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgba(135,206,250, 0.5);
+    
+  }
+  #menu{
+      display: flex;
+      list-style: none;
+      gap: .5rem;
+  }
+  #menu a{
+      display: block;
+      padding: 1rem;
+  
+  }
+  #btn-mobile{
+      display: none;
+  }
+  #head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100vw;
+   
+  }
+  .conteudo{
+    display: flex;
+    height: 70vh;
+    width: 100vw;
+    align-items:center;
+    justify-content: center;
+   
+  }
+  .conteudo h1{
+    font-size: 1.2rem;
+  }
+ 
+  .baner{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  
+  }
+  .baner img{
+    width: 30vw;
+    
+  
+  }
+  .baner span{
+    font-size:1.7rem;
+    width:50vw;
+  }
+  .produtos{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100vw;
+      height: 70vh;
+    
+  
+  }
+  .produtos h3{
+    width: 80vw;
+  padding: 20px 20px;
+  background-color: rgba(135,206,250, 0.3);
+  border-radius: 2px;
+  
+  }
+  #itens{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(135,206,250, 0.2);
+    width: 100vw;
+    height: 70vh;
+    padding: 4px;
+  }
+  #itens img{
+    
+    width:40vw;
+    height: 50vh;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(214, 225, 233, 0.37);
+  }
+  
+  #itens span a{
+    display:absolute;
+    background-color: rgba(135,206,250, 0.40);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    
+  } 
+  .projetos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 70vh;
+
+    background-color: rgba(214, 225, 231, 0.281);
+  }
+  .projetos h3{
+    width: 60vw;
+    font-size: 2vw;
+    text-align: center;
+    background-color: rgba(214, 225, 233, 0.74);
+  }
+  /*sub menu da aba projetos */
+  .sbm-projetos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 60vh;
+    width: 100vw;
+    
+  }
+  .sbm-projetos img{
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 40vh ;
+    background-color: white;
+    margin: 10px;
+  }
+  
+  .sbm-projetos span{
+    display:absolute;
+    background-color: rgba(135, 206, 250, 0.685);
+    border-radius: 3px;
+    padding: 10px;
+    margin: 20px;
+  }
+  .noticias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    height: 45vh;
+    padding: 20px;
+    margin: 0px 10px;
+  }
+  .noticias h2{
+    padding: 10px;
+    margin: 1px 5px;
+    width: 100vw;
+    background-color: rgba(14, 11, 11, 0.144);
+    
+  
+  }
+  .noticias h4{
+    width: 90vw;
+  }
+  #footer{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 60vh;
+  }
+  .Info-contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+  }
+  .Info-contato span{
+    margin: 5px;
+  }
+  .contato-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10vw;
+    height: 80vh;
+    padding: 20px 35vw;
+    margin: 8px 43px;
+    background-color: rgba(135,206,250, 0.3);
+    border-radius: 5px;
+  }
+  .contato-box input{
+    padding: 10px;
+    margin: 5px;
+  }
+  .contato-box button{
+    width: 39vw;
+    height: 5vh;
+  }
